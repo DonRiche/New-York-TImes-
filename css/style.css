@@ -14,7 +14,28 @@ margin: 20px;
     font-family: 'Raleway', sans-serif;
 }
 
-.search-parameters{
+.search-parametersCont{
     border: 1px solid rgb(209, 209, 209);
     border-radius:4px; 
+}
+
+.search-parameters{
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgb(43, 51, 161);
+    color: white;
+}
+
+.searchTerm{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.inputBars{
+    margin-top: 0;
+}
+
+.buttons{
+  background-color: rgb(202, 202, 202); 
+  color: white; 
 }
