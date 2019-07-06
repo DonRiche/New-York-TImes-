@@ -17,36 +17,49 @@ var resultsNumber = 5
 
 var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + keyword + startYear + endYear + "1231&api-key=ZVaT9Hn0MgGveFG8hw7Avnr9Zjk089GX"
 
-$.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    for(var i = 0; i < resultsNumber; i++){
-        if (startYearField !== ""){
-            startYear = "&begin_date=" + startYearNumber + "0101";
-        }
-        
-        else{
-            startYear = "";
-        }
+$("#search").on("click", function () {
+    event.preventDefault();
 
-        if (endYearField !== ""){
-            endYear = "&end_date=" + endYearNumber + "1231";
-        }
-        
-        else{
-            endYear = "";
-        }
+    clearInterval();
 
-        
-        var headline = (response.response.docs[i].headline.main);
-        var byline = (response.response.docs[i].byline.main);
-        console.log(response.response.docs[i].web_url)
-        var articleDiv = $("<div>");
-        articleDiv.addClass("article");
-        
-        articleDiv.append(headline);
-        articleDiv.append(byline);
-        $("#searchResults").append(articleDiv);
-    }
-  });
+    keyword = $("#searchTerm").val();
+
+    startYearNumber = $("#startYear").val();
+
+    endYearNumber = $("#endYear").val();
+
+    resultsNumber = parseInt();
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        for (var i = 0; i < resultsNumber; i++) {
+            if (startYearField !== "") {
+                startYear = "&begin_date=" + startYearNumber + "0101";
+            }
+
+            else {
+                startYear = "";
+            }
+
+            if (endYearField !== "") {
+                endYear = "&end_date=" + endYearNumber + "1231";
+            }
+
+            else {
+                endYear = "";
+            }
+
+
+            var headline = (response.response.docs[i].headline.main);
+            var byline = (response.response.docs[i].byline.main);
+            console.log(response.response.docs[i].web_url)
+            var articleDiv = $("<div>");
+            articleDiv.addClass("article");
+
+            articleDiv.append(headline);
+            articleDiv.append(byline);
+            $("results").append(articleDiv);
+        }
+    })
+})
