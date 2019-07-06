@@ -1,0 +1,14 @@
+body{
+display: flex;
+justify-content: space-around;
+}
+
+#header {
+    background-color: #C9B8EB
+}
+
+#searchArea{
+    border: solid;
+    border-width: 5px;
+    background-color: #B9E8FF;
+}
