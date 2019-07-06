@@ -12,6 +12,37 @@
 </head>
 
 <body>
+    <div class="container">
+        <div id="header">
+            <h1>New York Times Search</h1>
+        </div>
+        <div id="searchArea"> Search Paramaters
+            <form>
+                <p> Search Term:</p>
+                <input id="textbook" type="text" name="searchTerm"><br>
+
+                <p> Number of Records to Retrieve:</p>
+                <input id="textbook" type="text" name="recordRetrieve"><br>
+
+                <p> Start Year (optional):</p>
+                <input id="textbook" type="text" name="startYear"><br>
+
+                <p> End Year (optional):</p>
+                <input id="textbook" type="text" name="endYear"><br>
+
+                <button id="search">Search</button>
+                <button id="clearResults">Clear Results</button>
+            </form>
+
+            <div id="searchResults"> Top Articles
+                <form>
+                    <div id="results">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     <script src="javascript/ny.js"></script>
