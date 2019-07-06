@@ -1,0 +1,23 @@
+body{
+<<<<<<< HEAD
+display: flex;
+justify-content: space-around;
+}
+
+#header {
+    background-color: #C9B8EB
+}
+
+#searchArea{
+    border: solid;
+    border-width: 5px;
+    background-color: #B9E8FF;
+=======
+    margin: 20px;
+};
+
+#header{
+    background-color: rgb(42, 24, 146);
+    text-align: center;
+>>>>>>> d6c8c00ce29464c97b9cf2d7250699a2ee8c61d6
+}
