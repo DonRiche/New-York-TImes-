@@ -14,7 +14,20 @@ margin: 20px;
     font-family: 'Raleway', sans-serif;
 }
 
+#overflow {
+    overflow: scroll;
+}
+
 .search-parameters{
     border: 1px solid rgb(209, 209, 209);
     border-radius:4px; 
+}
+
+#searchResults {
+    border: 1px solid rgb(209, 209, 209);
+    border-radius:4px; 
+}
+
+.article {
+    background-clip: #0A0FF0;
 }
